@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cap Configurator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Cap configurator</h1>
+    <p>
+      Welcome to the cap-configurator!<br />
+      Please select the features you want on your cap.
+    </p>
+
+    <div id="configurator">
+      <div id="product-preview">
+        <!-- the feauture image layers --> 
+        <img src="images/cap_basic.png" alt="" class="basic" data-feature="basic"/>
+        <img src="images/cap_solarfan.png" alt="" class="hide" data-feature="solarfan"/>
+        <img src="images/cap_shield_front.png" alt="" class="hide" data-feature="shield" />
+        <img src="images/cap_propeller.png" alt="" class="hide" data-feature="propeller" />
+        <img src="images/cap_led.png" alt="" class="hide" data-feature="led" />
+        <img src="images/cap_drinksholder.png" alt="" class="hide" data-feature="drinksholder" />
+      </div>
+
+      <div id="options">
+        Available features
+        <figure class="option" data-feature="drinksholder">
+          <img src="images/feature_drinksholder.png" alt="Drinksholder" />
+          <figcaption>Drinks holder</figcaption>
+        </figure>
+        <figure class="option" data-feature="led">
+          <img src="images/feature_led.png" alt="LED" />
+          <figcaption>LED text</figcaption>
+        </figure>
+        <figure class="option" data-feature="propeller">
+          <img src="images/feature_propeller.png" alt="Propeller" />
+          <figcaption>Propeller</figcaption>
+        </figure>
+        <figure class="option" data-feature="shield">
+          <img src="images/feature_shield.png" alt="Sun shield" />
+          <figcaption>Sun Shield</figcaption>
+        </figure>
+        <figure class="option" data-feature="solarfan">
+          <img src="images/feature_solarfan.png" alt="Solar powered fan" />
+          <figcaption>Solar Powered Fan</figcaption>
+        </figure>
+      </div>
+      
+      <div id="selected">
+        Selected features
+        <ul>
+          <!-- featureElements are added here! -->
+        </ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

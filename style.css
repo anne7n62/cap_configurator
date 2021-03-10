@@ -1,0 +1,120 @@
+:root {
+  font-family: "Quicksand", sans-serif;
+}
+
+#configurator {
+  display: grid;
+  grid-template-areas:
+    "product options"
+    "features features";
+  gap: 1em;
+}
+
+#product-preview {
+  grid-area: product;
+  box-shadow: 3px 3px 8px #ddd;
+  border-radius: 1em;
+  position: relative;
+  transition: opacity ease-in 0.5s;
+}
+
+#product-preview img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+}
+
+#product-preview .hide {
+  opacity: 0;
+}
+
+#product-preview img.basic {
+  position: relative;
+}
+
+#options {
+  grid-area: options;
+  box-shadow: 3px 3px 8px #ddd;
+  border-radius: 1em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#options .option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+  color: #aaa;
+}
+
+#options .option:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+#options .option.chosen {
+  text-decoration: underline;
+  color: #000;
+}
+
+#options .option img {
+  width: 7vw;
+  height: auto;
+}
+
+#options .option figcaption {
+  font-size: 20px;
+}
+
+#selected {
+  grid-area: features;
+}
+
+#selected ul {
+  list-style-type: none;
+}
+
+#selected ul li {
+  display: inline-block;
+}
+
+#selected ul li img {
+  width: 3em;
+}
+
+/* Animation classes */
+
+/* Animation classes */
+
+.animate-feature-in {
+  animation: add 1 1s;
+}
+
+@keyframes add {
+  0% {
+    transform: translate(var(--diffx), var(--diffy)) scale(0);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+.animate-feature-out {
+  animation: remove 1 1.5s reverse;
+}
+
+@keyframes remove {
+  0% {
+    transform: translate(var(--diffx), var(--diffy)) scale(0);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
